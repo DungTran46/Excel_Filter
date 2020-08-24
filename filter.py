@@ -140,7 +140,7 @@ def parse_csv(in_file_name, picking_list_fname, packing_list_fname):
     packing_list                = []
     header_keywords_pos_dict    = {}
 
-    with open(in_file_name, newline='') as csv_in_file:
+    with open(in_file_name, newline='', encoding="utf8") as csv_in_file:
         reader = csv.reader(csv_in_file)
 
         # Find header row index and remove empty row and invalid row
